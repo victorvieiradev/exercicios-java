@@ -1,10 +1,8 @@
 package catalisa.lista03b;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class SomandoNumerosInteiros {
+public class SomandoNumerosInteiroECalculandoMedia {
     public static void main(String[] args) {
         int soma = 0;
         double media = 0;
