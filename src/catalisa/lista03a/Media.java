@@ -23,7 +23,7 @@ public class Media {
         if (media == 10){
             System.out.printf("suas notas foram: \n 1º nota %.2f \n 2º nota %.2f \n Média %.2f \n", nota1, nota2, media);
             System.out.println("Aprovado com distinção!");
-        }else if (media > 7){
+        }else if (media >= 7){
             System.out.printf("suas notas foram: \n 1º nota %.2f \n 2º nota %.2f \n Média %.2f \n", nota1, nota2, media);
             System.out.println("Aprovado");
         }else {
