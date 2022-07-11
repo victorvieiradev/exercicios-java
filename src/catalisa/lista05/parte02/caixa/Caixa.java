@@ -1,4 +1,4 @@
-package catalisa.lista05.parte02.jardinagem;
+package catalisa.lista05.parte02.caixa;
 
 public class Caixa {
     public double saldo;

@@ -1,4 +1,4 @@
-package catalisa.lista05.parte02.jardinagem;
+package catalisa.lista05.parte02.caixa;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class CaixaMain {
             while (caixa.valor<=0){
                 System.out.println("valor inválido, tente novamente");
                 caixa.valor = input.nextDouble();
-            }
+    }
 
             System.out.println("Sua operação será no credito ou no débito? \n 1 para crédito ou 2 para débito");
             int resp = input.nextInt();
