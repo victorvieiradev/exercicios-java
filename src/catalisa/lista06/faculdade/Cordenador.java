@@ -34,6 +34,11 @@ public class Cordenador extends  Funcionario{
     }
 
     public void adicionarProfessor(Professor professoresSupervisionados) {
-        this.professoresSupervisionados.add(professoresSupervisionados);
+        if (this.professoresSupervisionados.size() == 11){
+            System.out.println("O limite de supervisão de professores chegou no limite de 10 supervisionado, não será possível adicionar mais.");
+        }else {
+            this.professoresSupervisionados.add(professoresSupervisionados);
+        }
+
     }
 }
