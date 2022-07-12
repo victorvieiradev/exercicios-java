@@ -21,6 +21,8 @@ public class FuncionarioAdministrativo extends  Funcionario{
         super.apresentar();
         System.out.println("Tipo de função: " + this.getFuncaoAdministrativa());
         System.out.println("Senioridade: " + this.getSenioridade());
+        this.aumentarSalario();
+        System.out.println("Novo salário com o aumento de 10% R$" + this.getSalario());
     }
 
     public String getFuncaoAdministrativa() {
