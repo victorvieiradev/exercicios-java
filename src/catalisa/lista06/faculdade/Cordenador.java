@@ -6,9 +6,9 @@ import java.util.Set;
 public class Cordenador extends  Funcionario{
     private Set<Professor> professoresSupervisionados = new HashSet<>();
 
-    public Cordenador(String nome, String cpf, String numeroDoRegistro, String orgaoDeLotacao, double salario, Set<Professor> professoresSupervisionados) {
+    public Cordenador(String nome, String cpf, String numeroDoRegistro, String orgaoDeLotacao, double salario) {
         super(nome, cpf, numeroDoRegistro, orgaoDeLotacao, salario);
-        this.setProfessoresSupervisionados(professoresSupervisionados);
+
     }
 
     @Override
@@ -17,11 +17,23 @@ public class Cordenador extends  Funcionario{
         this.salario += reajuste;
     }
 
+    @Override
+    public void apresentar() {
+        System.out.println("Coordenador");
+        super.apresentar();
+        aumentarSalario();
+        System.out.println("Depois do reajuste de 5% o seu salário será: R$" + this.getSalario());
+        System.out.println("Lista de professores supervisionados");
+        for (Professor profesor : professoresSupervisionados){
+            System.out.println("Professor: " + profesor.getNome());
+        }
+    }
+
     public Set<Professor> getProfessoresSupervisionados() {
         return professoresSupervisionados;
     }
 
-    public void setProfessoresSupervisionados(Set<Professor> professoresSupervisionados) {
-        this.professoresSupervisionados = professoresSupervisionados;
+    public void adicionarProfessor(Professor professoresSupervisionados) {
+        this.professoresSupervisionados.add(professoresSupervisionados);
     }
 }
