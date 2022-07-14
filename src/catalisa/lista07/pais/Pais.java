@@ -22,6 +22,14 @@ public class Pais {
             System.out.println(pais.getNome() + " Não é vizinho.");
         }
     }
+    public void emComumCom(Pais p){
+    System.out.println(this.getNome() + " tem País em comum com " + p.getNome());
+        for (Pais pais1 : listaDePais){
+            if (p.listaDePais.contains(pais1)){
+                System.out.println(pais1.getNome());
+            }
+        }
+    }
     public void adicionarPais(Pais pais){
         this.listaDePais.add(pais);
     }

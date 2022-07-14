@@ -9,9 +9,11 @@ public class PaisMain {
         Pais p4 = new Pais("asdf", "Canadá", 3100);
         Vizinho.adicionarVizinho(p1, p3);
         Vizinho.adicionarVizinho(p1, p4);
+        Vizinho.adicionarVizinho(p3, p4);
         p1.eVizinho(p2);
         p3.eVizinho(p1);
         p1.listarPais();
         System.out.println("Dencidade demografica é: " + p1.calcularDensidade());
+        p1.emComumCom(p3);
     }
 }
