@@ -4,41 +4,37 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Pais {
-    private String codigoIso;
+    private  String codigoIso;
     private String nome;
-    private int populacao;
-    private int dimenssao;
-    private Set<Pais> paisComFronteira = new HashSet<>();
+    private  int populacao;
+    private  double dimencao;
+    private Set<Pais> listaDePais = new HashSet<>();
 
-    public Pais(String codigoIso, String nome, int populacao, int dimenssao) {
+    public Pais(String codigoIso, String nome, double dimencao) {
         this.setCodigoIso(codigoIso);
         this.setNome(nome);
-        this.setPopulacao(populacao);
-        this.setDimenssao(dimenssao);
+        this.setDimencao(dimencao);
     }
-    public void apresentar(){
-        System.out.println("Nome: " + this.getNome());
-        System.out.println("Código: " + this.getCodigoIso());
-        System.out.println("População: " + this.getPopulacao());
-        System.out.println("Dimensão geografica: " + this.getDimenssao());
-        System.out.println("Dencidade demografica: " + this.exebirDencidadeDemografica());
-        System.out.println("Os meus visinhos são: ");
-        for (Pais pais: paisComFronteira){
+    public void eVizinho(Pais pais){
+        if (this.listaDePais.contains(pais)){
+            System.out.println(pais.getNome() + " é vizinho.");
+        }else {
+            System.out.println(pais.getNome() + " Não é vizinho.");
+        }
+    }
+    public void adicionarPais(Pais pais){
+        this.listaDePais.add(pais);
+    }
+    public void listarPais(){
+        System.out.println("os países vizinhos de: " + this.getNome());
+        for (Pais pais : listaDePais){
             System.out.println(pais.getNome());
         }
     }
-    public void addPais(Pais pais){
-        this.paisComFronteira.add(pais);
-    }
-    public void eVisinho(Pais pais){
-        if (this.paisComFronteira.contains(pais)){
-            System.out.println(pais.getNome()+" é visinho");
-        }else {
-            System.out.println(pais.getNome()+" não é visinho.");
-        }
-    }
-    private double exebirDencidadeDemografica(){
-        return this.getPopulacao() / this.getDimenssao();
+
+
+    public double calcularDensidade(){
+        return this.getPopulacao() / this.getDimencao();
     }
     public String getCodigoIso() {
         return codigoIso;
@@ -64,11 +60,11 @@ public class Pais {
         this.populacao = populacao;
     }
 
-    public int getDimenssao() {
-        return dimenssao;
+    public double getDimencao() {
+        return dimencao;
     }
 
-    public void setDimenssao(int dimenssao) {
-        this.dimenssao = dimenssao;
+    public void setDimencao(double dimencao) {
+        this.dimencao = dimencao;
     }
 }
