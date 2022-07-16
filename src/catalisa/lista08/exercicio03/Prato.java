@@ -5,8 +5,9 @@ public class Prato {
     private String nome;
     private List<String> ingredientes = new ArrayList<>();
 
-    public Prato(String nome) {
+    public Prato(String nome, List<String> ingredientes) {
         this.setNome(nome);
+        this.setIngredientes(ingredientes);
     }
 
     public String getNome() {
