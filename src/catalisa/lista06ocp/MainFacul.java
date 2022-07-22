@@ -24,6 +24,13 @@ public class MainFacul {
         //adicionando uma turma para um professor
         diretoria.adicionarTurmaParaProfessor(professor, turma);
         diretoria.listarTurmasDoProfessor(professor);
+        //Testando a classe estagiário
+        Estagiario estagiario = new Estagiario("Silvia", "444.333.222-11", "1234", "Secretaria da educação estadual", 800);
+        financeiro.aumentoSalarial(estagiario, 15);
+        financeiro.reembolso(estagiario);
+        //Adicionando um estagiario para um professor
+        diretoria.adicionarEstagiarioParaProfessor(professor, estagiario);
+        diretoria.listarEstagiariosDoProfessor(professor);
 
 
 
